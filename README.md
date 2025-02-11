@@ -1,5 +1,6 @@
 # Solutions-to-the-SQL-Assignment
 
+The details about the assignment can be accessed through this [link](https://github.com/popoolaio/SQL-Class-Assignment).
 
 ## Basic SELECT Queries
 1. **Retrieve all customers**
