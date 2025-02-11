@@ -31,9 +31,6 @@ WHERE OrderDate > '2023-01-01';
 ## Sorting Data
 5. **Retrieve the top 10 most expensive products**
 ```Python
-
-✋✋✋
-	
 SELECT ProductID, Name, ListPrice 
 FROM Production.Product
 ORDER BY ListPrice DESC
@@ -134,4 +131,5 @@ DELETE FROM Sales.Customer
 WHERE CustomerID NOT IN (SELECT DISTINCT CustomerID FROM Sales.SalesOrderHeader);
 ```
 
+✋✋✋
 
