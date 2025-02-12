@@ -31,10 +31,9 @@ WHERE OrderDate > '2023-01-01';
 ## Sorting Data
 5. **Retrieve the top 10 most expensive products**
 ```Python
-SELECT ProductID, Name, ListPrice 
+SELECT Top (10) ProductID, Name, ListPrice 
 FROM Production.Product
-ORDER BY ListPrice DESC
-LIMIT 10;
+ORDER BY ListPrice DESC;
 ```
 
 6. **Retrieve the top 5 most recent orders**
@@ -66,9 +65,9 @@ FROM Production.Product;
 ## Grouping Data with GROUP BY
 10. **Count the number of products in each category**
 ```Python
-SELECT ProductCategoryID, COUNT(*) AS ProductCount 
+SELECT ProductSubcategoryID, COUNT(*) AS ProductCount 
 FROM Production.Product
-GROUP BY ProductCategoryID;
+GROUP BY ProductSubcategoryID;
 ```
 
 11. **Find total sales by year**
@@ -114,8 +113,9 @@ HAVING COUNT(SalesOrderID) > 5;
 ## Data Modification (INSERT, UPDATE, DELETE)
 16. **Insert a new customer**
 ```Python
-INSERT INTO Sales.Customer (PersonID, StoreID, TerritoryID, AccountNumber)
-VALUES (NULL, 932, 5, 'AW00099999');
+UPDATE Sales.Customer
+SET StoreID = 932, TerritoryID = 5
+WHERE PersonID IS NULL;
 ```
 
 17. **Update product price by 10%**
